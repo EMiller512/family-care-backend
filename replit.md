@@ -1,77 +1,77 @@
 # Family Care Monitor
 
 ## Overview
-Family Care Monitor is a home health monitoring application built with Flask (backend) and React (frontend). It helps family caregivers monitor and care for family members by tracking health data, managing reminders, and providing health alerts.
+Family Care Monitor is a health monitoring application for families. This is a Flask-based backend API that manages user profiles, health data, alerts, and reminders for family caregivers and their loved ones.
 
-**Current State**: Fully functional and ready to use. Successfully imported and configured for Replit environment on October 28, 2025.
+**Current State:** Backend API is set up and running. Frontend will be imported in a later step.
+
+**Last Updated:** October 28, 2025
 
 ## Recent Changes
-- **October 28, 2025**: Initial import and setup
-  - Installed Python 3.11 and all dependencies from requirements.txt
-  - Modified Flask app to serve static React frontend files
-  - Configured workflow to run on port 5000
-  - Set up deployment configuration using Gunicorn with autoscale mode
-  - Created .gitignore for Python project
+- October 28, 2025: Initial setup in Replit environment
+  - Installed Python 3.11 and Flask dependencies
+  - Configured Flask backend to run on port 5000
+  - Set up SQLite database with SQLAlchemy ORM
+  - Configured deployment settings with Gunicorn
+  - Added .gitignore for Python projects
 
 ## Project Architecture
 
-### Technology Stack
-- **Backend**: Flask 3.1.1 with Flask-CORS and Flask-SQLAlchemy
-- **Database**: SQLite with SQLAlchemy ORM
-- **Frontend**: Pre-built React application (static files)
-- **Production Server**: Gunicorn
+### Backend (Flask)
+- **Framework:** Flask 3.1.1
+- **Database:** SQLite with SQLAlchemy ORM
+- **API Routes:**
+  - `/api/health` - Health check endpoint
+  - `/api/*` - User, health data, profiles, and reminders endpoints
+- **Port:** 5000 (development server)
+- **Database Location:** `src/database/app.db`
 
-### Directory Structure
+### Models
+- `User` - User accounts and authentication
+- `HealthData` - Health metrics and records
+- `Alert` - Health alerts and notifications
+- `UserProfile` - User profile information
+- `Question` - Health questionnaire data
+- `Reminder` - Medication and appointment reminders
+
+### Frontend
+- **Status:** Not yet imported (old static files exist but will be replaced)
+- **Will be added:** In a later step
+
+## Configuration
+
+### Development
+- **Server:** Flask development server
+- **Host:** 0.0.0.0:5000
+- **Debug Mode:** Enabled
+- **CORS:** Enabled for all `/api/*` routes
+
+### Deployment
+- **Target:** Autoscale (stateless web application)
+- **Server:** Gunicorn with reuse-port enabled
+- **Command:** `gunicorn --bind=0.0.0.0:5000 --reuse-port src.main:app`
+
+## File Structure
 ```
-.
 ├── src/
-│   ├── database/           # SQLite database files
-│   ├── models/            # SQLAlchemy models (User, HealthData, Reminder)
-│   ├── routes/            # API route handlers
-│   │   ├── health.py
-│   │   ├── reminders.py
-│   │   ├── user.py
-│   │   └── user_profile.py
-│   ├── static/            # React frontend build files
-│   │   ├── assets/        # JS and CSS bundles
-│   │   ├── favicon.ico
-│   │   └── index.html
-│   ├── main.py            # Flask application entry point
-│   └── apple_health_parser.py
-├── requirements.txt       # Python dependencies
-├── Procfile              # Original deployment config
-└── render.yaml           # Original Render.com config
+│   ├── models/          # Database models
+│   ├── routes/          # API route blueprints
+│   ├── database/        # SQLite database files
+│   ├── static/          # Old frontend (to be replaced)
+│   └── main.py          # Flask application entry point
+├── requirements.txt     # Python dependencies
+├── .gitignore          # Git ignore patterns
+└── Procfile            # Legacy deployment config
 ```
 
-### Key Features
-- **Role-based access**: Family Caregiver and Parent/Senior roles
-- **Health data tracking**: Monitor health metrics and alerts
-- **Reminder system**: Manage care-related reminders
-- **User profiles**: Store and view health information
-- **RESTful API**: All routes prefixed with `/api/`
-
-### Database
-- Uses SQLite database at `src/database/app.db`
-- Auto-creates tables on application startup
-- Models: User, HealthData, Alert, UserProfile, Question, Reminder
-
-### Configuration
-- **Development**: Flask development server on 0.0.0.0:5000
-- **Production**: Gunicorn with autoscale deployment
-- **CORS**: Enabled for all `/api/*` routes
-- **Static Files**: React app served from root path, API routes under `/api/`
-
-## Running the Application
-- **Development**: The workflow "Server" runs `python src/main.py`
-- **Port**: 5000 (configured for Replit environment)
-- **Deployment**: Configured for autoscale deployment with Gunicorn
-
-## API Endpoints
-- `GET /api/health` - Health check endpoint
-- `/api/*` - Various health monitoring and user management endpoints
-- All other routes serve the React frontend
+## Dependencies
+- Flask 3.1.1
+- Flask-CORS 6.0.0
+- Flask-SQLAlchemy 3.1.1
+- SQLAlchemy 2.0.41
+- Gunicorn 21.2.0
 
 ## Notes
-- The application includes Apple Health data parsing functionality
-- Demo version notice displayed on frontend
-- CORS configured to allow cross-origin requests for API endpoints
+- The backend uses SQLite for simplicity but can be migrated to PostgreSQL if needed
+- CORS is configured to allow all origins for development
+- The static folder contains old frontend code that will be replaced when the new frontend is imported

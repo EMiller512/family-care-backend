@@ -3,7 +3,7 @@ import sys
 # DON'T CHANGE THIS !!!
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from flask import Flask, send_from_directory
+from flask import Flask
 from flask_cors import CORS
 from src.models.user import db
 from src.models.health_data import HealthData, Alert, UserProfile, Question
@@ -38,14 +38,6 @@ with app.app_context():
 def health_check():
     return {"status": "healthy"}, 200
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def serve_frontend(path):
-    static_folder = os.path.join(os.path.dirname(__file__), 'static')
-    if path != "" and os.path.exists(os.path.join(static_folder, path)):
-        return send_from_directory(static_folder, path)
-    else:
-        return send_from_directory(static_folder, 'index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
