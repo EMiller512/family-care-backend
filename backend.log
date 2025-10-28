@@ -1,0 +1,92 @@
+nohup: ignoring input
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 864-832-172
+127.0.0.1 - - [12/Oct/2025 12:33:48] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:33:55] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:00] "HEAD /api/health HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:34] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:34] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:50] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:50] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:56] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:56] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:56] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:34:56] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:08] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:08] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:10] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:16] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:18] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:18] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:18] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:18] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:35] "OPTIONS /api/health/data HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:35] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+10.90.115.1 - - [12/Oct/2025 12:35:37] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:40] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:35:40] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:38:02] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:38:02] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:40:22] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:40:22] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:41:03] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:41:11] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:44:33] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:44:33] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:46:03] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:47:13] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:47:13] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:51:04] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:51:52] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:52:51] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:52:51] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:53:58] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:53:58] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 12:56:04] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:56:21] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:56:21] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:56:21] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:56:21] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:57:01] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:57:01] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:58:06] "OPTIONS /api/health/data HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:58:06] "[35m[1mPOST /api/health/data HTTP/1.1[0m" 201 -
+127.0.0.1 - - [12/Oct/2025 12:58:06] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:58:46] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 12:58:46] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 13:01:09] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:03:36] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:03:36] "GET /api/health/data?user_id=2&days=1 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:03:36] "GET /api/alerts?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:04:40] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:04:40] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:04:40] "GET /api/health/data?user_id=2&days=1 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:04:40] "GET /api/health/data?user_id=2&days=1 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:04:40] "GET /api/alerts?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:04:40] "GET /api/alerts?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:05:35] "GET /api/user_profile/2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:05:35] "GET /api/user_profile/2 HTTP/1.1" 200 -
+10.90.115.1 - - [12/Oct/2025 13:06:09] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:07:09] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:07:09] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:07:09] "GET /api/reminders?user_id=2&status=active HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2025 13:07:09] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/family-care-api/src/routes/health.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 864-832-172
+10.90.115.1 - - [12/Oct/2025 13:11:38] "GET /api/health/data?user_id=2 HTTP/1.1" 200 -
